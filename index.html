@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header class="introducao">
+    <img src="./images/logo.svg" alt="">
+    <div class="placar">
+      <h2 class="score" >SCORE</h2>
+      <p class="pontuacao">0</p>
+    </div>
+  </header>
+  <!-- inicio -->
+  <main class="jogo">
+    <img class="triangulo" src="./images/bg-triangle.svg" alt="">
+    <div class="conteiner-papel" onclick="jogar(papel)">
+      <button  value="papel" class="papel opcao"><img src="./images/icon-paper.svg"
+          alt=""></button>
+    </div>
+    <div class="conteiner-tesoura" onclick="jogar(tesoura)">
+      <button  value="tesoura" class="tesoura opcao"><img src="./images/icon-scissors.svg"
+          alt=""></button>
+    </div>
+    <div class="conteiner-pedra" onclick="jogar(pedra)">
+      <button  value="pedra" class="pedra opcao"><img src="./images/icon-rock.svg"
+          alt=""></button>
+  </main>
+  </div>
+  <!-- regras -->
+  <button class="regras-button" onclick="mostraregras()">RULES</button>
+  <div id="regras" class="regras">
+    <div class="regras-titulo">
+      <h1>RULES</h1>
+      <button onclick="fecharegras()"><img src="./images/icon-close.svg" alt=""></button>
+    </div>
+    <img src="./images/image-rules.svg" alt="">
+  </div>
+  <!-- gameplay -->
+  <div class="gameplay">
+    <div class="player display">
+      <h2>YOU PICKED</h2>
+      <p class="test"></p>
+    </div>
+    <div class="fim">
+    <p class="result"></p>
+    <button class="playAgain"onclick="reset()">PLAY AGAIN</button>
+  </div>
+    <div class="house display">
+      <h2>THE HOUSE PICKED</h2>
+      <p class="test1"></p>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
