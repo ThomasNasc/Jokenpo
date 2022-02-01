@@ -7,22 +7,22 @@ body {
   background: #182243;
 }
 .introducao {
-  margin-top: 50px;
+  margin-top: 40px;
   border-radius: 15px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 50%;
-  min-width: 600px;
+  width: 100%;
+  max-width: 1000px;
   border: solid 2px white;
   height: 200px;
 }
 .introducao img {
   padding: 20px;
-  width: 15vw;
-  min-width: 300px;
+  width: 30%;
+  min-width: 150px;
 }
 
 .placar {
@@ -41,6 +41,7 @@ body {
 .score {
   color: blue;
   font-size: 15px;
+  margin-top: 5px;
 }
 .pontuacao {
   font-size: 50px;
@@ -55,59 +56,65 @@ body {
   position: relative;
   justify-content: center;
   display: flex;
-  margin-top: 200px;
-  width: 600px;
+  margin-top: 150px;
+  width: 100%;
+  max-width: 600px;
 }
-.triangulo{
-width: 500px;
+.triangulo {
+  width: 70%;
 }
 .opcao {
-  
   padding: 20px;
   background-color: white;
   border-radius: 50%;
   border: 35px solid;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   animation: opacidade 2s linear;
   animation: rotatez 1s linear;
 }
+.opcao:hover {
+  animation: luzDeFundo 2s ease infinite;
+}
+.opcao:focus {
+  animation: luzDeFundo 2s ease infinite;
+}
+.test,
+.test1 {
+  border-radius: 50%;
+}
 
-.conteiner-papel{
+.conteiner-papel {
   position: absolute;
   top: -130px;
   left: -60px;
 }
-.conteiner-tesoura{
+.conteiner-tesoura {
   position: absolute;
   top: -130px;
   right: -60px;
 }
-.conteiner-pedra{
+.conteiner-pedra {
   position: absolute;
   bottom: -70px;
 }
 .opcao img {
-  width:100px;
+  width: 100px;
   transition: 0.5s;
 }
-.opcao :hover{
+.opcao :hover {
   transform: rotatey(360deg);
 }
 .papel {
-  
   border-color: #5471fa;
   box-shadow: 0px 7px 0px #3f53b8, inset 0px 7px #d6d6d6;
 }
 .tesoura {
-  
   border-color: #e99f0d;
-  
+
   box-shadow: 0px 7px 0px #aa750c, inset 0px 7px #d6d6d6;
 }
 .pedra {
-  
-
   border-color: #df3f5c;
   box-shadow: 0px 7px 0px #6e2230, inset 0px 7px #d6d6d6;
 }
@@ -127,8 +134,8 @@ width: 500px;
   flex-direction: column;
   justify-content: center;
   padding: 30px;
-box-shadow: 0px 0px 0px 3000px rgba(0, 0, 0, 0.664);
-
+  box-shadow: 0px 0px 0px 3000px rgba(0, 0, 0, 0.664);
+  z-index: 2;
 }
 
 .regras-titulo {
@@ -144,30 +151,36 @@ box-shadow: 0px 0px 0px 3000px rgba(0, 0, 0, 0.664);
   border: none;
   background-color: transparent;
 }
-.regras-button{
+.regras-button {
   position: fixed;
-  right: 20vw;
-  bottom: 100px;
+  bottom: 3%;
+  left: 50%;
+  transform: translate(-50%);
   height: 50px;
   width: 150px;
   border-radius: 10px;
-  background-color: transparent
-  ;
+  background-color: transparent;
   border: 2px solid white;
   font-size: 15px;
   color: white;
+  transition: linear 0.5s;
+}
+.regras-button:hover {
+  background-color: white;
+  color: #182243;
 }
 
 /* GAMEPLAY */
 
-.gameplay{
+.gameplay {
   display: none;
-  width: 50%;
-  justify-content:space-evenly;
+  width: 100%;
+  max-width: 600px;
+  justify-content: space-evenly;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
-
+  z-index: -1;
 }
 
 /* .test1{
@@ -179,54 +192,179 @@ box-shadow: 0px 0px 0px 3000px rgba(0, 0, 0, 0.664);
 
 
 } */
-.display{
+.display {
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 50%;
 }
-.display h2{
+.display h2 {
   font-family: sans-serif;
-  margin: 40px;
-  font-size: 1vw;
+  margin-top: 10px;
+  margin-bottom: 40px;
+
+  font-size: 20px;
   color: white;
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  flex-wrap: wrap;
 }
 
-.playAgain{
- 
+.playAgain {
   width: 250px;
   height: 50px;
   border-radius: 10px;
-  color: red;
+  color: rgb(0, 0, 0);
   font-weight: bold;
   letter-spacing: 2px;
   font-size: 15px;
- 
+  border: none;
 }
-.result{
+.result {
   font-size: 45px;
   font-family: sans-serif;
   color: white;
   text-align: center;
   font-weight: bold;
-  margin-top: 150px;
+  margin-top: 50px;
   margin-bottom: 20px;
-  
-  
 }
-.fim{
-  margin: 50px;
+.fim {
+  margin: 20px;
   display: none;
   animation: opacidade 2s linear;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.persona1{
+  display: none;
+
 }
 
 
-@keyframes opacidade{
-  from {opacity: 0;}
-  to{opacity: 1;}
+@keyframes opacidade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes rotatez {
-  from{transform: rotatey(0deg);
+  from {
+    transform: rotatez(0deg);
   }
-  to{transform: rotatey(360deg);}
+  to {
+    transform: rotatez(360deg);
+  }
 }
+
+@keyframes luzDeFundo {
+  0% {
+    box-shadow: 0px 0px 0px 0px;
+  }
+  50% {
+    box-shadow: 0px 0px 700px 10px rgb(59, 142, 250);
+  }
+  0% {
+    box-shadow: 0px 0px 0px 0px;
+  }
+}
+/* tablet */
+@media screen and (max-width: 800px) {
+  .opcao {
+    width: 40vw;
+    height: 40vw;
+    max-width: 220px;
+    max-height: 220px;
+    border: 20px solid;
+  }
+  .persona1{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+   
+  }
+  .persona{
+    display: none;
+  }
+  .opcao img {
+    width: 11vw;
+  }
+  .jogo{
+    margin-top: 120px;
+  }
+  .fim {
+    position: fixed;
+    top: 410px;
+  }
+  .result {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+.gameplay h2{
+  font-size: 3vw;
+  margin-top: 20px;
+}
+  .triangulo {
+    margin-top: 1vw;
+    width: 60%;
+  }
+  .conteiner-papel {
+    top: -80px;
+    left: 5vw;
+  }
+  .conteiner-tesoura {
+    position: absolute;
+    top: -80px;
+    right: 10px;
+  }
+  .conteiner-pedra {
+    position: absolute;
+    bottom: -70px;
+  }
+  .regras-button {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+   
+  
+    height: 45px;
+  }
+  .introducao{
+    height: 120px;
+    margin: 5px;
+    margin-top: 20px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .placar{height: 85px;
+  width: 100px;}
+
+  .papel {
+    border-color: #5471fa;
+    box-shadow: 0px 7px 0px #3f53b8, inset 0px 7px #d6d6d6;
+  }
+  .tesoura {
+    border-color: #e99f0d;
+  
+    box-shadow: 0px 7px 0px #aa750c, inset 0px 7px #d6d6d6;
+  }
+  .pedra {
+    border-color: #df3f5c;
+    box-shadow: 0px 7px 0px #6e2230, inset 0px 7px #d6d6d6;
+  }
+ .regras{
+   width: 100%;
+   height: 100%;
+   position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 0;
+ }
+}
+

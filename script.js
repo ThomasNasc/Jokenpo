@@ -19,9 +19,16 @@ var pontuacao = document.getElementsByClassName('pontuacao')[0]
 var playAgain = document.getElementsByClassName('fim')[0]
 var score = 0
 function jogar(num) {
-
-  jogo.style.display = "none";
-  selecao.style.display = "flex";
+  jogo.style.cssText = "animation: opacidade 0.5s linear;animation-direction: reverse;"
+  
+  setTimeout(() => {
+    jogo.style.display = "none";
+  }, 500);
+  
+  setTimeout(() => {
+    selecao.style.display = "flex";
+  }, 500);
+  selecao.style.cssText = "animation: opacidade 1.5s linear;"
 
   switch (num) {
     case pedra:
@@ -42,29 +49,39 @@ function jogar(num) {
   var random = Math.floor(Math.random() * 3);
   var house = refs[random];
   test1.innerHTML = house.outerHTML;
-  test1.value = house.value
+  test1.value = house.value;
 
 
 
 // PARTIDA
 
 setTimeout(() => {
-  if(test.value == "pedra" && test1.value == "tesoura" || test.value == "tesoura" && test1.value == "papel"|| test.value == "papel" && test1.value == "pedra"){
-    resultado.innerHTML = "YOU WIN"
-    score += 1
-    pontuacao.innerHTML = score
-   }else if(test.value == "pedra" && test1.value == "papel" || test.value == "tesoura" && test1.value == "pedra"|| test.value == "papel" && test1.value == "tesoura"){
-     resultado.innerHTML = "YOU LOSE"
-   }else{
-    resultado.innerHTML = "EMPATE"
-   }
-playAgain.style.display = "block"
+  Resolucao()
 }, 500);
+}
+function Resolucao(){
+  if(test.value == "pedra" && test1.value == "tesoura" || test.value == "tesoura" && test1.value == "papel"|| test.value == "papel" && test1.value == "pedra"){
+    resultado.innerHTML = "YOU WIN";
+    score += 1;
+    pontuacao.innerHTML = score;
+    test.style.cssText = "animation: luzDeFundo 1.5s ease infinite;";
+   }else if(test.value == "pedra" && test1.value == "papel" || test.value == "tesoura" && test1.value == "pedra"|| test.value == "papel" && test1.value == "tesoura"){
+     resultado.innerHTML = "YOU LOSE";
+     test1.style.cssText = "animation: luzDeFundo 1.5s ease infinite;";
+   }else{
+    resultado.innerHTML = "DRAW";
+    test.style.cssText = "animation: luzDeFundo 1.5s ease infinite;";
+    test1.style.cssText = "animation: luzDeFundo 1.5s ease infinite;";
+   }
+playAgain.style.display = "flex";
 }
 
 function reset( ){
   jogo.style.display = "flex";
   selecao.style.display = "none";
-  resultado.innerHTML = ""
-  playAgain.style.display = "none"
+  resultado.innerHTML = "";
+  playAgain.style.display = "none";
+  test.style.cssText = "animation: '' ";
+  test1.style.cssText = "animation: '' ";
+  jogo.style.cssText = "''";
 }

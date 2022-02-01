@@ -20,15 +20,15 @@
   <!-- inicio -->
   <main class="jogo">
     <img class="triangulo" src="./images/bg-triangle.svg" alt="">
-    <div class="conteiner-papel" onclick="jogar(papel)">
+    <div class="conteiner conteiner-papel" onclick="jogar(papel)">
       <button  value="papel" class="papel opcao"><img src="./images/icon-paper.svg"
           alt=""></button>
     </div>
-    <div class="conteiner-tesoura" onclick="jogar(tesoura)">
+    <div class="conteiner conteiner-tesoura" onclick="jogar(tesoura)">
       <button  value="tesoura" class="tesoura opcao"><img src="./images/icon-scissors.svg"
           alt=""></button>
     </div>
-    <div class="conteiner-pedra" onclick="jogar(pedra)">
+    <div class="conteiner conteiner-pedra" onclick="jogar(pedra)">
       <button  value="pedra" class="pedra opcao"><img src="./images/icon-rock.svg"
           alt=""></button>
   </main>
@@ -45,16 +45,18 @@
   <!-- gameplay -->
   <div class="gameplay">
     <div class="player display">
-      <h2>YOU PICKED</h2>
+      <h2 class="persona">YOU PICKED</h2>
       <p class="test"></p>
+      <h2 class="persona1">YOU PICKED</h2>
     </div>
     <div class="fim">
     <p class="result"></p>
     <button class="playAgain"onclick="reset()">PLAY AGAIN</button>
   </div>
-    <div class="house display">
-      <h2>THE HOUSE PICKED</h2>
+    <div class="house display ">
+      <h2 class="persona">THE HOUSE PICKED</h2>
       <p class="test1"></p>
+      <h2 class="persona1">THE HOUSE PICKED</h2>
     </div>
   </div>
 
