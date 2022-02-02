@@ -155,8 +155,8 @@ body {
 .regras-button {
   position: fixed;
   bottom: 1%;
-  left: 10%;
-  /* transform: translate(-50%); */
+  left: 50%;
+  transform: translate(-50%);
   height: 50px;
   width: 150px;
   border-radius: 10px;
@@ -330,6 +330,9 @@ body {
   .regras-button {
  width: 80px;
     height: 45px;
+    position: fixed;
+    bottom: 1%;
+    left: 20%;
   }
   .introducao{
     height: 120px;
