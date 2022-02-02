@@ -31,14 +31,13 @@
     <div class="conteiner conteiner-pedra" onclick="jogar(pedra)">
       <button  value="pedra" class="pedra opcao"><img src="./images/icon-rock.svg"
           alt=""></button>
-  </main>
-  </div>
-  <!-- regras -->
-  <button class="regras-button" onclick="mostraregras()">RULES</button>
-  <div id="regras" class="regras">
-    <div class="regras-titulo">
-      <h1>RULES</h1>
-      <button onclick="fecharegras()"><img src="./images/icon-close.svg" alt=""></button>
+        </main>
+      </div>
+      <!-- regras -->
+      <div id="regras" class="regras">
+        <div class="regras-titulo">
+          <h1>RULES</h1>
+          <button onclick="fecharegras()"><img src="./images/icon-close.svg" alt=""></button>
     </div>
     <img src="./images/image-rules.svg" alt="">
   </div>
@@ -50,15 +49,16 @@
       <h2 class="persona1">YOU PICKED</h2>
     </div>
     <div class="fim">
-    <p class="result"></p>
-    <button class="playAgain"onclick="reset()">PLAY AGAIN</button>
-  </div>
+      <p class="result"></p>
+      <button class="playAgain"onclick="reset()">PLAY AGAIN</button>
+    </div>
     <div class="house display ">
       <h2 class="persona">THE HOUSE PICKED</h2>
       <p class="test1"></p>
       <h2 class="persona1">THE HOUSE PICKED</h2>
     </div>
   </div>
+  <button class="regras-button" onclick="mostraregras()">RULES</button>
 
   <script src="./script.js"></script>
 </body>

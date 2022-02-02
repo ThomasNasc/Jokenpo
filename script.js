@@ -18,6 +18,7 @@ var refs = [pedra, papel, tesoura];
 var pontuacao = document.getElementsByClassName('pontuacao')[0]
 var playAgain = document.getElementsByClassName('fim')[0]
 var score = 0
+var buttonRegras = document.getElementsByClassName('regras-button')[0]
 function jogar(num) {
   jogo.style.cssText = "animation: opacidade 0.5s linear;animation-direction: reverse;"
   
@@ -29,7 +30,7 @@ function jogar(num) {
     selecao.style.display = "flex";
   }, 500);
   selecao.style.cssText = "animation: opacidade 1.5s linear;"
-
+buttonRegras.style.display = "none"
   switch (num) {
     case pedra:
       test.innerHTML = pedra.outerHTML;
@@ -84,4 +85,5 @@ function reset( ){
   test.style.cssText = "animation: '' ";
   test1.style.cssText = "animation: '' ";
   jogo.style.cssText = "''";
+  buttonRegras.style.display = "block"
 }

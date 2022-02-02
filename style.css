@@ -59,6 +59,7 @@ body {
   margin-top: 150px;
   width: 100%;
   max-width: 600px;
+  height: 30%;
 }
 .triangulo {
   width: 70%;
@@ -153,9 +154,9 @@ body {
 }
 .regras-button {
   position: fixed;
-  bottom: 3%;
-  left: 50%;
-  transform: translate(-50%);
+  bottom: 1%;
+  left: 10%;
+  /* transform: translate(-50%); */
   height: 50px;
   width: 150px;
   border-radius: 10px;
@@ -212,7 +213,7 @@ body {
 }
 
 .playAgain {
-  width: 250px;
+  width:250px;
   height: 50px;
   border-radius: 10px;
   color: rgb(0, 0, 0);
@@ -299,10 +300,10 @@ body {
   }
   .fim {
     position: fixed;
-    top: 410px;
+    top: 60%;
   }
   .result {
-    font-size: 30px;
+    font-size: 4vw;
     margin-bottom: 10px;
   }
 .gameplay h2{
@@ -327,11 +328,7 @@ body {
     bottom: -70px;
   }
   .regras-button {
-    position: fixed;
-    left: 50%;
-    transform: translate(-50%);
-   
-  
+ width: 80px;
     height: 45px;
   }
   .introducao{
@@ -366,5 +363,14 @@ body {
     top: 0;
     border-radius: 0;
  }
+ .playAgain{
+   width: 100%;
+ }
 }
+@media screen and (max-height: 550px) {
+ .jogo{
+   height: 100px;
+ }
+}
+
 
